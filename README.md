@@ -17,7 +17,6 @@ The network is designed to represent a small enterprise environment with separat
 - Enable secure remote router management using SSH.
 
 ## Network Departments
-
 | VLAN | Department | Network | Gateway |
 |---|---|---|---|
 | 10 | IT | 192.168.10.0/24 | 192.168.10.1 |
