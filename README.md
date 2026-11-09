@@ -88,6 +88,28 @@ I also learned how to troubleshoot network connectivity problems and verify conf
 
 The Packet Tracer file and supporting screenshots are included in this repository.
 
+## Network Topology
+
+The following diagram shows the network layout built in Cisco Packet Tracer.
+
+![Network Topology](Topologi%20Jaringan.png)
+
+## Project Testing
+
+The following screenshots show the results of the network configuration and testing:
+
+### DNS Testing
+![DNS Testing](Pengujian%20DNS.png)
+
+### Web Server Testing
+![Web Server Testing](Pengujian%20Web%20Server.png)
+
+### ACL Testing
+![ACL Testing](Pengujian%20ACL.png)
+
+### SSH Testing
+![SSH Testing](Pengujian%20SSH.png)
+
 ## Author
 
 **Sri Indah Permata Silalahi**
