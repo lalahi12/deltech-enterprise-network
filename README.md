@@ -1,22 +1,32 @@
 # DelTech Enterprise Network Infrastructure
 
-## Project Overview
+A network infrastructure project built using Cisco Packet Tracer.
 
-This project is an enterprise network infrastructure simulation developed using Cisco Packet Tracer.
+## About This Project
 
-The network is designed to represent a small enterprise environment with separate departments, centralized server services, inter-VLAN routing, and network security policies.
+In this project, I designed and configured a small enterprise network for a company with three departments: IT, HR, and Finance.
 
-## Project Objectives
+Each department uses a separate VLAN so that the network is easier to manage. I also connected all departments to a central server for internal network services.
 
-- Design an enterprise network topology.
-- Implement VLAN segmentation for different departments.
-- Configure inter-VLAN routing using Router-on-a-Stick.
-- Implement DHCP and DNS services.
-- Provide an internal web server.
-- Apply Access Control Lists (ACL) for network security.
-- Enable secure remote router management using SSH.
+I worked on the network configuration step by step, starting from connecting the devices and setting up VLANs to testing communication between different networks.
 
-## Network Departments
+## What I Worked On
+
+Here are the main configurations I completed in this project:
+
+- Created VLANs for IT, HR, Finance, and Server.
+- Configured trunk connections between switches and the router.
+- Set up inter-VLAN routing using Router-on-a-Stick.
+- Configured DHCP to assign IP addresses automatically.
+- Set up DNS for the internal domain.
+- Configured an internal web server.
+- Added ACL rules to restrict access from Finance to IT.
+- Enabled SSH for remote router management.
+
+## Network Design
+
+The network uses one Cisco 2911 router, two Cisco 2960 switches, one server, and six client PCs.
+
 | VLAN | Department | Network | Gateway |
 |---|---|---|---|
 | 10 | IT | 192.168.10.0/24 | 192.168.10.1 |
@@ -24,49 +34,63 @@ The network is designed to represent a small enterprise environment with separat
 | 30 | Finance | 192.168.30.0/24 | 192.168.30.1 |
 | 40 | Server | 192.168.40.0/24 | 192.168.40.1 |
 
-## Technologies Used
+## Server Information
+
+The server is connected to VLAN 40 and provides internal network services.
+
+| Configuration | Value |
+|---|---|
+| Server IP Address | 192.168.40.10 |
+| Subnet Mask | 255.255.255.0 |
+| Default Gateway | 192.168.40.1 |
+| DNS Domain | intranet.deltech.local |
+| Web Service | HTTP |
+
+## Network Security
+
+I configured an Extended ACL on the router to prevent devices in the Finance VLAN from initiating communication with the IT VLAN.
+
+Other permitted network traffic is still allowed. This configuration was tested using ping between PCs in different VLANs.
+
+SSH was also enabled so the router can be accessed remotely from a PC without using Telnet.
+
+## Testing
+
+After configuring the network, I performed several tests to check whether everything was working properly.
+
+The tests included:
+
+- Checking connectivity between PCs and their gateways.
+- Testing communication between different VLANs.
+- Checking DHCP address assignment.
+- Accessing the server using its IP address.
+- Opening the internal website using `intranet.deltech.local`.
+- Testing the ACL rules between Finance and IT.
+- Connecting to the router using SSH.
+
+The tests helped me identify and fix some configuration issues during the project.
+
+## Tools and Devices
 
 - Cisco Packet Tracer
 - Cisco 2911 Router
 - Cisco 2960 Switch
-- VLAN and Trunking
-- Inter-VLAN Routing
-- DHCP
-- DNS
-- HTTP Web Server
-- Access Control List (ACL)
-- SSH Remote Management
+- Server
+- End Devices (PCs)
 
-## Network Security
+## What I Learned
 
-An Extended ACL is implemented to prevent the Finance department from initiating access to the IT network, while allowing other permitted network traffic.
+Through this project, I gained practical experience in configuring VLANs, routing, DHCP, DNS, and network security.
 
-## Server Configuration
+I also learned how to troubleshoot network connectivity problems and verify configurations using Cisco IOS commands.
 
-- Server IP: 192.168.40.10
-- DNS Domain: intranet.deltech.local
-- DNS Service: Enabled
-- HTTP Service: Enabled
+## Project File
 
-## Testing and Validation
-
-The following network functions have been tested:
-
-- Connectivity between PCs and their gateways.
-- Inter-VLAN communication.
-- DHCP address assignment.
-- DNS name resolution.
-- Internal web server access.
-- ACL access restrictions.
-- SSH remote management.
-
-## Project Files
-
-The Cisco Packet Tracer simulation file and supporting documentation will be provided in this repository.
+The Packet Tracer file and supporting screenshots are included in this repository.
 
 ## Author
 
 **Sri Indah Permata Silalahi**
 
-Network Infrastructure Project  
-Institut Teknologi Del
+Institut Teknologi Del  
+Network Infrastructure Project
