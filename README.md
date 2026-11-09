@@ -106,6 +106,7 @@ The following screenshots show the results of the network configuration and test
 
 ### ACL Testing
 ![ACL Testing](Pengujian%20ACL.png)
+![ACL Testing](Pengujian%20ACL.png)
 
 ### SSH Testing
 ![SSH Testing](Pengujian%20SSH.png)
